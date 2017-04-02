@@ -6,6 +6,9 @@
 
 <style>
 body {
-  font-family: "Roboto"
+  font-family: "Roboto";
+  background-color: #eee;
+
+  margin: 0;
 }
 </style>
