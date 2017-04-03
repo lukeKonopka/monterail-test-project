@@ -13,7 +13,7 @@ const state = {
 
 const mutations = {
   addQuestions (state, newQuestions) {
-    state.questions = state.questions.push(newQuestions)
+    state.questions.push(...newQuestions)
   },
 
   setUserDetail (state, userDetail) {
@@ -32,10 +32,15 @@ const actions = {
   }
 }
 
+const getters = {
+  questions: state => state.questions
+}
+
 const store = new Vuex.Store({
   state,
   mutations,
-  actions
+  actions,
+  getters
 })
 
 export default store
