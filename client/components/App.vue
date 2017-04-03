@@ -7,7 +7,7 @@
 <style>
 body {
   font-family: "Roboto";
-  background-color: #eee;
+  background-color: #fc9;
 
   margin: 0;
 }

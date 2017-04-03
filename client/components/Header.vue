@@ -1,13 +1,15 @@
 <template lang="html">
   <header>
-    <div class="topBar">
-      <div class="titleSection">
-        <h1>{{ title }}</h1>
-        <div class="addQuestion">+</div>
+    <div class="content">
+      <div class="top">
+        <div class="titleSection">
+          <h1>{{ title }}</h1>
+          <div class="addQuestion">+</div>
+        </div>
+        <slot name="top"></slot>
       </div>
-      <slot name="topBar"></slot>
+      <slot></slot>
     </div>
-    <slot name="bottomBar"></slot>
   </header>
 </template>
 
@@ -25,38 +27,52 @@ export default {
   $circleSize: 32px;
   $circleColor: #22a;
 
-  header {
-    width: 1000px;
-    margin: 0 auto;
+  header{
+    width: 100vw;
+    height: 100px;
+    background-color: white;
 
-    .topBar{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: baseline;
+    position: fixed;
+    top: 0;
+    left: 0;
 
-      .titleSection {
+    padding: 16px 0;
+
+
+    .content {
+      width: 1000px;
+      margin: 0 auto;
+
+      .top{
         display: flex;
         flex-direction: row;
         align-items: baseline;
+        justify-content: space-between;
 
-        h1 {
-          text-transform: uppercase;
-          margin-right: 32px;
-        }
-
-        .addQuestion {
-
-          width: $circleSize;
-          height: $circleSize;
-          background-color: $circleColor;
-          border-radius: calc( #{$circleSize} / 2);
-
-          color: white;
-          font-size: $circleSize;
+        .titleSection{
           display: flex;
-          justify-content: center;
-          align-items: center;
+          flex-direction: row;
+          align-items: baseline;
+          flex-basis: 25%;
+
+          h1 {
+            text-transform: uppercase;
+            margin-right: 32px;
+          }
+
+          .addQuestion {
+
+            width: $circleSize;
+            height: $circleSize;
+            background-color: $circleColor;
+            border-radius: calc( #{$circleSize} / 2);
+
+            color: white;
+            font-size: $circleSize;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
         }
       }
     }
