@@ -6,6 +6,11 @@ export default [
         name: 'Eva',
         avatarUrl: 'https://www.practicepte.com/images/clients/avatar_man.jpg'
       },
+      stats: {
+        related: 2,
+        peers: 8,
+        convos: 5
+      },
       content: {
         title: 'Will insulin make my patient gain weight?',
         activities: [
@@ -57,6 +62,11 @@ export default [
         id: 1,
         name: 'Eva',
         avatarUrl: 'https://www.practicepte.com/images/clients/avatar_man.jpg'
+      },
+      stats: {
+        related: 1,
+        peers: 4,
+        convos: 2
       },
       content: {
         title: 'Vegan diet in diabetes treatment?',
