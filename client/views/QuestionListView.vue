@@ -5,9 +5,11 @@
       <div class="search">Search</div>
     </HeaderComponent>
 
-    <main>
-      <FilteredQuestionList> </FilteredQuestionList>
-    </main>
+    <div class="wrapper">
+      <main>
+        <FilteredQuestionList> </FilteredQuestionList>
+      </main>
+    </div>
   </div>
 
 </template>
@@ -28,16 +30,40 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  main {
-    width: 1000px;
+  .wrapper {
+    width: 1400px;
     margin: 0 auto;
 
     background-color: #eee;
 
     margin-top: 132px;
 
-    padding: 0 200px 0 200px;
-
     box-shadow: 2px 0px 8px 0px rgba(0,0,0,0.1);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    main {
+      width: 1000px;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    .wrapper {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .wrapper main {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 660px) {
+    .wrapper {
+      margin-top: 92px;
+    }
   }
 </style>

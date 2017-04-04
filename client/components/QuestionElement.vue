@@ -138,7 +138,7 @@ $blue: darken($lightBlue, 60);
       .stat {
         display: flex;
         flex-direction: row;
-        align-items: baseline;
+        align-items: center;
 
         .value {
           padding-left: 32px;
@@ -150,6 +150,70 @@ $blue: darken($lightBlue, 60);
         .desc {
           font-family: "Courgette";
           opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .qElement{
+    header {
+      width: 100%;
+    }
+
+    main {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .qElement {
+    height: 285px;
+
+    header {
+      align-items: center;
+
+      img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .desc {
+        padding: 0;
+        h2 {
+          font-size: 10pt;
+          .name {
+            font-size: 14pt;
+          }
+        }
+        h1 {
+          font-size: 14pt;
+        }
+      }
+    }
+
+    main {
+      .type {
+        display: none;
+      }
+
+      .info {
+        padding: 12px 0;
+        width: 100px;
+
+        .stat{
+          flex-direction: column;
+          .value {
+            font-size: 12pt;
+            padding: 0;
+          }
+
+          .desc {
+            font-size: 10pt;
+            text-align: center;
+          }
         }
       }
     }

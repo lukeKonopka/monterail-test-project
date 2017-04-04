@@ -41,6 +41,7 @@ export default {
   //margin: 16px 8px 0 8px;
 
   width: 120px;
+  margin: 0 4px;
 
   height: 180px;
 
@@ -68,6 +69,14 @@ export default {
     height: 100%;
 
     border-radius: 50%;
+  }
+}
+
+@media (max-width: 660px) {
+  .activity {
+    width: auto;
+    margin: 2px;
+    flex-grow: 1;
   }
 }
 </style>

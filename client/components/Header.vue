@@ -28,9 +28,12 @@ export default {
   $circleColor: #22a;
 
   header{
-    width: 100vw;
+    width: 100%;
     height: 100px;
     background-color: white;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1);
+
+    z-index: 100;
 
     position: fixed;
     top: 0;
@@ -61,17 +64,58 @@ export default {
           }
 
           .addQuestion {
-
             width: $circleSize;
             height: $circleSize;
             background-color: $circleColor;
-            border-radius: calc( #{$circleSize} / 2);
+            border-radius: 50%;
 
             color: white;
             font-size: $circleSize;
             display: flex;
             justify-content: center;
             align-items: center;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    header {
+      .content {
+        width: 100%;
+
+        padding: 0 32px;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  @media (max-width: 660px) {
+    header {
+      height: 60px;
+      .content {
+        .top {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .titleSection {
+            width: 100%;
+            justify-content: center;
+
+            h1 {
+              margin: 0px;
+              font-size: 16pt;
+              flex-grow: 1;
+            }
+
+            .addQuestion {
+              $cSizeSmall: $circleSize / 1.5;
+              width: $cSizeSmall;
+              height: $cSizeSmall;
+              font-size: $cSizeSmall;
+            }
           }
         }
       }
