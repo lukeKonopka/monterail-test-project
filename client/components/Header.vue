@@ -25,7 +25,7 @@ export default {
 
 <style scoped lang="scss">
   $circleSize: 32px;
-  $circleColor: #22a;
+  $circleColor: #006b9c;
 
   header{
     width: 100%;
@@ -44,12 +44,16 @@ export default {
 
     .content {
       width: 1000px;
+      height: 100%;
       margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       .top{
         display: flex;
         flex-direction: row;
-        align-items: baseline;
+        align-items: center;
         justify-content: space-between;
 
         .titleSection{
@@ -60,7 +64,7 @@ export default {
 
           h1 {
             text-transform: uppercase;
-            margin-right: 32px;
+            margin: 10px 32px 10px 0;
           }
 
           .addQuestion {
