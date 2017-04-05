@@ -11,4 +11,6 @@ body {
 
   margin: 0;
 }
+
+textarea, input, button { outline: none; }
 </style>
