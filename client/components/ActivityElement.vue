@@ -2,7 +2,7 @@
   <div :class="['activity', {'more': type == 'more'}]">
     <div class="icon">
       <template v-if="type != 'more'">
-        <img class="avatar" :src="activity.user.avatarUrl" />
+        <UserAvatar class="avatar" :src="activity.user.avatarUrl"> </UserAvatar>
       </template>
       <div v-if="type == 'more'" class="number"> {{this.activity.length}} </div>
     </div>
@@ -12,10 +12,12 @@
 
 <script>
 import ActivityLabel from './ActivityLabel'
+import UserAvatar from './UserAvatar'
 
 export default {
   components: {
-    ActivityLabel
+    ActivityLabel,
+    UserAvatar
   },
   props: ['activity'],
   computed: {

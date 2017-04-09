@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="qElement">
     <header>
-      <img :src="question.user.avatarUrl" />
+      <UserAvatar :src="question.user.avatarUrl" :userId="question.user.id"> </UserAvatar>
       <div class="desc">
         <h2>
           <span class="name">{{question.user.name}}</span> is asking:
@@ -29,11 +29,13 @@
 <script>
 import ActivityList from './ActivityList'
 import ActivityLabel from './ActivityLabel'
+import UserAvatar from './UserAvatar'
 
 export default {
   components: {
     ActivityList,
-    ActivityLabel
+    ActivityLabel,
+    UserAvatar
   },
   computed: {
     stats: function () {
