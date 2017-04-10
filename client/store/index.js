@@ -20,7 +20,7 @@ const state = {
 
 const mutations = {
   addQuestions (state, newQuestions) {
-    state.questions.push(...newQuestions)
+    state.questions = newQuestions;
   },
 
   setUserDetail (state, userDetail) {
