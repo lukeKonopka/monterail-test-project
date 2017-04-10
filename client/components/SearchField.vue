@@ -1,12 +1,19 @@
 <template lang="html">
   <div class="searchField">
-    <input type="text" placeholder="Search questions" />
-    <button>Search</button>
+    <input class="inputField" type="text" placeholder="Search questions" v-model="query"/>
+    <button @click="searchThis">Search</button>
   </div>
 </template>
 
 <script>
 export default {
+  methods: {
+    searchThis: function () {
+      this.$store.commit('setSearchQuery', this.query)
+      this.query = ''
+      document.querySelector('.inputField').value = ''
+    }
+  }
 }
 </script>
 

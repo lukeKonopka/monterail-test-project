@@ -14,7 +14,8 @@ const state = {
   sortBy: {
     recent: true,
     hot: false
-  }
+  },
+  searchQuery: ''
 }
 
 const mutations = {
@@ -34,6 +35,10 @@ const mutations = {
     for(var key in state.sortBy) {
       state.sortBy[key] = key == sortType
     }
+  },
+
+  setSearchQuery (state, query) {
+    state.searchQuery = query;
   }
 }
 
@@ -56,7 +61,8 @@ const getters = {
   questions: state => state.questions,
   userDetail: state => state.userDetail,
   questionDetail: state => state.questionDetail,
-  sortBy: state => state.sortBy
+  sortBy: state => state.sortBy,
+  searchQuery: state => state.searchQuery
 }
 
 const store = new Vuex.Store({
