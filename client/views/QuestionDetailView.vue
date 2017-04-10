@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="questionDetailView">
-    <Header>
+    <HeaderComponent>
       <div slot="top" class="discussedLastTime">
         <span class="desc">
           Discussed last time
@@ -9,7 +9,7 @@
           1 day ago
         </span>
       </div>
-    </Header>
+    </HeaderComponent>
     <main>
       {{$route.params.id}}
     </main>
@@ -17,11 +17,11 @@
 </template>
 
 <script>
-import Header from '../components/Header'
+import HeaderComponent from '../components/Header'
 
 export default {
   components: {
-    Header
+    HeaderComponent
   }
 }
 </script>
