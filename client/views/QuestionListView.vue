@@ -54,6 +54,8 @@ export default {
     background-color: #eee;
 
     margin-top: 132px;
+    margin-bottom: 100px;
+    padding-bottom: 32px;
 
     box-shadow: 2px 0px 8px 0px rgba(0,0,0,0.1);
 
