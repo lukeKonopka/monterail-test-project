@@ -36,9 +36,6 @@ export default {
     SortByToggle,
     SearchField,
     UserDetailModal
-  },
-  created: function () {
-    this.$store.dispatch('fetchQuestions', 0)
   }
 }
 </script>

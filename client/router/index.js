@@ -13,7 +13,10 @@ export default new Router({
     {
       path: '/',
       name: 'Questions',
-      component: QuestionListView
+      component: QuestionListView,
+      beforeEnter: (to, from, next) => {
+        store.dispatch('fetchQuestions', 0).then(next)
+      }
     },
     {
       path: '/question/:id',
