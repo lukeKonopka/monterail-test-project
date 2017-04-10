@@ -16,12 +16,7 @@
       <div class="activities">
         <ActivityList :activities="question.content.activities"> </ActivityList>
       </div>
-      <div class="info">
-        <div v-for="stat in stats" class="stat">
-          <div class="value">{{stat.value}}</div>
-          <div class="desc">{{stat.desc}}</div>
-        </div>
-      </div>
+      <DiscussionStats :stats="question.stats"> </DiscussionStats>
     </main>
   </div>
 </template>
@@ -30,22 +25,14 @@
 import ActivityList from './ActivityList'
 import ActivityLabel from './ActivityLabel'
 import UserAvatar from './UserAvatar'
+import DiscussionStats from './DiscussionStats'
 
 export default {
   components: {
     ActivityList,
     ActivityLabel,
-    UserAvatar
-  },
-  computed: {
-    stats: function () {
-      const s = this.question.stats
-      return [
-        { value: s.related, desc: 'related discussion' },
-        { value: s.peers, desc: 'peers involved' },
-        { value: s.convos, desc: 'conversations' }
-      ]
-    }
+    UserAvatar,
+    DiscussionStats
   },
   props: ['question']
 }
@@ -128,32 +115,6 @@ $blue: darken($lightBlue, 60);
 
     .activities {
       flex-grow: 1;
-    }
-
-    .info {
-      width: 25%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      padding: 32px 0;
-
-      .stat {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        .value {
-          padding-left: 32px;
-          padding-right: 8px;
-
-          font-size: 16pt;
-        }
-
-        .desc {
-          font-family: "Courgette";
-          opacity: 0.8;
-        }
-      }
     }
   }
 }
