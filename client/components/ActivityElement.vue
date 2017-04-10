@@ -1,5 +1,5 @@
 <template lang="html">
-  <div :class="['activity', {'more': type == 'more'}]">
+  <div :class="['activity', {'more': type == 'more'}]" @click="handleClick">
     <div class="icon">
       <template v-if="type != 'more'">
         <UserAvatar class="avatar" :src="activity.user.avatarUrl" :userId="activity.user.id"> </UserAvatar>
@@ -28,6 +28,13 @@ export default {
         return this.activity.type
       }
     }
+  },
+  methods: {
+    handleClick() {
+      if(this.type=='more'){
+        this.$emit('more')
+      }
+    }
   }
 }
 </script>
@@ -49,6 +56,7 @@ export default {
 
   &.more {
     background-color: white;
+    cursor: pointer;
   }
 
   .icon {

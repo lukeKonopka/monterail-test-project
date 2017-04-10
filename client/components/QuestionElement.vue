@@ -6,7 +6,7 @@
         <h2>
           <span class="name">{{question.user.name}}</span> is asking:
         </h2>
-        <h1> {{question.content.title}} </h1>
+        <router-link :to="{name: 'Question', params: {id: question.id}}" tag="h1"> {{question.content.title}} </router-link>
       </div>
     </header>
     <main>
@@ -14,7 +14,7 @@
         <ActivityLabel type="question"> </ActivityLabel>
       </div>
       <div class="activities">
-        <ActivityList :activities="question.content.activities"> </ActivityList>
+        <ActivityList :activities="question.content.activities" @more="showQuestion(question.id)"> </ActivityList>
       </div>
       <DiscussionStats :stats="question.stats"> </DiscussionStats>
     </main>
@@ -34,7 +34,12 @@ export default {
     UserAvatar,
     DiscussionStats
   },
-  props: ['question']
+  props: ['question'],
+  methods: {
+    showQuestion(id) {
+      this.$router.push({name: 'Question', params: {id}})
+    }
+  }
 }
 </script>
 
@@ -95,6 +100,8 @@ $blue: darken($lightBlue, 60);
         font-family: "Courgette";
         font-weight: normal;
         font-size: 18pt;
+
+        cursor: pointer;
       }
     }
   }

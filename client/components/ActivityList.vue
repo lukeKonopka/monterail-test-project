@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="activityList">
-    <ActivityElement v-for="activity in preppedActivities" :activity="activity"> </ActivityElement>
+    <ActivityElement v-for="activity in preppedActivities" :activity="activity" @more="$emit('more')"> </ActivityElement>
   </div>
 </template>
 
@@ -35,7 +35,7 @@ export default {
         const listWidth = this.$el.offsetWidth
         const activityWidth = Math.min(this.$children[0].$el.offsetWidth, 120)
         const paddedActivityWidth = activityWidth + 10
-        
+
         this.numberOfShown = Math.floor(listWidth / paddedActivityWidth) - 1
       }
     }
