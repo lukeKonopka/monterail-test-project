@@ -193,6 +193,7 @@ export default {
           display: flex;
           justify-content: center;
           flex-direction: row;
+          flex-wrap: wrap;
 
           margin: 48px 0 24px 0;
 
@@ -246,6 +247,7 @@ export default {
           display: flex;
           flex-direction: row;
           justify-content: center;
+          flex-wrap: wrap;
 
           .userBox {
             width: 100px;
@@ -266,6 +268,34 @@ export default {
 
     .hottestDiscussion {
       width: 100%;
+    }
+  }
+
+  @media(max-width: 800px) {
+    .userDetail {
+      width: 100%;
+
+      header {
+        margin: 0 25px;
+
+        .activityInfo {
+          .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+
+  @media(max-width: 660px) {
+    .userDetail {
+      main {
+        .roundup {
+          width: 310px;
+        }
+      }
     }
   }
 </style>

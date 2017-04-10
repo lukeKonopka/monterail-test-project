@@ -46,7 +46,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 $grey: #777;
 $lightBlue: #cff0ff;
 $blue: #006b9c;
@@ -83,6 +83,16 @@ $blue: #006b9c;
       margin: 8px 0;
       color: $blue;
       font-family: 'Courgette';
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .discussionSnippet {
+    .desc {
+      h1 {
+        font-size: 14pt;
+      }
     }
   }
 }

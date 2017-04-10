@@ -168,24 +168,6 @@ $blue: darken($lightBlue, 60);
       .type {
         display: none;
       }
-
-      .info {
-        padding: 12px 0;
-        width: 100px;
-
-        .stat{
-          flex-direction: column;
-          .value {
-            font-size: 12pt;
-            padding: 0;
-          }
-
-          .desc {
-            font-size: 10pt;
-            text-align: center;
-          }
-        }
-      }
     }
   }
 }
