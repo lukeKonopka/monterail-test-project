@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 
 import questions from '../mockData/questions'
 import users from '../mockData/users'
+import discussion from '../mockData/discussion'
 
 Vue.use(Vuex)
 
@@ -44,12 +45,17 @@ const actions = {
 
   fetchUserDetail ({ commit }, userId) {
     commit('setUserDetail', users[0])
+  },
+
+  fetchQuestionDetail ({ commit }, questionId) {
+    commit('setQuestionDetail', discussion)
   }
 }
 
 const getters = {
   questions: state => state.questions,
   userDetail: state => state.userDetail,
+  questionDetail: state => state.questionDetail,
   sortBy: state => state.sortBy
 }
 
