@@ -17,6 +17,7 @@ const generateAdorableAvatars = (data) => {
 const data = [
   [
     {
+      id: 1,
       user: {
         id: 1,
         name: 'Eva',
@@ -74,6 +75,7 @@ const data = [
       }
     },
     {
+      id: 2,
       user: {
         id: 1,
         name: 'Michael',
