@@ -11,29 +11,40 @@
       </div>
     </HeaderComponent>
     <main>
-      {{$route.params.id}}
+        <QuestionBox :question="discussion.post"> </QuestionBox>
     </main>
   </div>
 </template>
 
 <script>
 import HeaderComponent from '../components/Header'
+import QuestionBox from '../components/QuestionBox'
 
 export default {
   components: {
-    HeaderComponent
+    HeaderComponent,
+    QuestionBox
+  },
+  computed: {
+    discussion: function() {
+      return this.$store.getters.questionDetail
+    }
   }
 }
 </script>
 
 <style scoped lang="scss">
+$bgColor: #eee;
+
 .questionDetailView {
   .discussedLastTime {
     text-align: right;
   }
 
   main {
-    margin-top: 132px;
+    margin: 132px auto 0px auto;
+    width: 1400px;
+    background-color: $bgColor;
   }
 }
 </style>
