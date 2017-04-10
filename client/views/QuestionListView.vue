@@ -1,8 +1,11 @@
 <template lang="html">
   <div class="view">
     <HeaderComponent>
-      <div slot="top" class="filters">Filters</div>
-      <div class="search">Search</div>
+      <div slot="top" class="filters">
+        <FilterToggle> </FilterToggle>
+        <SortByToggle> </SortByToggle>
+      </div>
+      <SearchField> </SearchField>
     </HeaderComponent>
 
     <div class="wrapper">
@@ -10,6 +13,7 @@
         <FilteredQuestionList> </FilteredQuestionList>
       </main>
     </div>
+    <UserDetailModal v-if="$store.getters.userDetail.id"> </UserDetailModal>
   </div>
 
 </template>
@@ -17,11 +21,21 @@
 <script>
 import HeaderComponent from '../components/Header'
 import FilteredQuestionList from '../components/FilteredQuestionList'
+import FilterToggle from '../components/FilterToggle'
+import SortByToggle from '../components/SortByToggle'
+import SearchField from '../components/SearchField'
+
+//test
+import UserDetailModal from '../components/UserDetailModal'
 
 export default {
   components: {
     HeaderComponent,
-    FilteredQuestionList
+    FilteredQuestionList,
+    FilterToggle,
+    SortByToggle,
+    SearchField,
+    UserDetailModal
   },
   created: function () {
     this.$store.dispatch('fetchQuestions', 0)
@@ -30,6 +44,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  .filters {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+  }
+
   .wrapper {
     width: 1400px;
     margin: 0 auto;
