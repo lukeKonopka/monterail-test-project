@@ -150,6 +150,87 @@ const data = [
           }
         ]
       }
+    },
+    {
+      id: 11,
+      user: {
+        id: 1,
+        name: 'Jacob',
+        avatarUrl: ''
+      },
+      stats: {
+        related: 3,
+        peers: 2,
+        convos: 7
+      },
+      content: {
+        title: 'Will insulin make my patient loose weight?',
+        activities: [
+          {
+            id: 6,
+            user: {
+              id: 2,
+              name: 'Matthew',
+              avatarUrl: ''
+            },
+            type: 'answer'
+          },
+          {
+            id: 7,
+            user: {
+              id: 2,
+              name: 'Tony',
+              avatarUrl: ''
+            },
+            type: 'comment'
+          },
+          {
+            id: 8,
+            user: {
+              id: 2,
+              name: 'Kevin',
+              avatarUrl: ''
+            },
+            type: 'comment'
+          },
+          {
+            id: 9,
+            user: {
+              id: 2,
+              name: 'Scott',
+              avatarUrl: ''
+            },
+            type: 'comment'
+          },
+          {
+            id: 19,
+            user: {
+              id: 2,
+              name: 'Tony',
+              avatarUrl: ''
+            },
+            type: 'comment'
+          },
+          {
+            id: 10,
+            user: {
+              id: 2,
+              name: 'Amanda',
+              avatarUrl: ''
+            },
+            type: 'comment'
+          },
+          {
+            id: 11,
+            user: {
+              id: 2,
+              name: 'Johnny',
+              avatarUrl: ''
+            },
+            type: 'comment'
+          }
+        ]
+      }
     }
   ]
 ]
