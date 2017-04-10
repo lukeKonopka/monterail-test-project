@@ -44,6 +44,10 @@ export default {
   .content {
     background-color: white;
     position: fixed;
+
+    max-height: 100vh;
+
+    overflow-y: auto;
   }
 
   .shade {
