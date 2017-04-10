@@ -18,16 +18,7 @@
       <div class="content">
         {{question.content}}
       </div>
-      <div class="vote">
-        <div class="stat">
-          <span class="value"> {{question.upvotes}} </span>
-          <span class="desc"> upvotes </span>
-        </div>
-        <div class="votingControls">
-          <div class="up"> &#x25B2; </div>
-          <div class="down"> &#x25BC; </div>
-        </div>
-      </div>
+      <VoteComponent :upvotes="question.upvotes"> </VoteComponent>
     </main>
     <div class="newAnswer">
       GIVE new answer
@@ -37,11 +28,13 @@
 
 <script>
 import UserAvatar from './UserAvatar'
+import VoteComponent from './VoteComponent'
 
 export default {
   props: ['question'],
   components: {
-    UserAvatar
+    UserAvatar,
+    VoteComponent
   }
 }
 </script>
@@ -55,6 +48,7 @@ $darkBlue: #006b9c;
   margin: 0 auto;
   background-color: white;
   position: relative;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.1);
 
   header {
     background-color: $blue;
@@ -112,41 +106,11 @@ $darkBlue: #006b9c;
 
     .content{
       flex-basis: calc(100% - 300px);
+      flex-grow: 1;
       padding: 16px;
       text-align: justify;
 
       margin-bottom: 24px;
-    }
-
-    .vote{
-      flex-basis: 200px;
-
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-
-      .stat {
-        margin-right: 16px;
-
-        .value {
-          font-size: 16pt;
-        }
-
-        .desc {
-          font-family: "Courgette";
-        }
-      }
-
-      .votingControls {
-        display: flex;
-        flex-direction: column;
-
-        .up, .down {
-          color: $darkBlue;
-          margin: 4px;
-        }
-      }
     }
   }
 
@@ -163,6 +127,52 @@ $darkBlue: #006b9c;
     bottom: -15px;
     left: calc(50% - 100px);
     border: 1px solid #e3e3e3;
+
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1000px) {
+  .questionBox {
+    width: 100%;
+
+    header {
+      .desc {
+        h1 {
+          font-size: 16pt;
+        }
+      }
+    }
+
+    main {
+
+      .drape {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .questionBox {
+    header {
+      height: 120px;
+
+      .avatar{
+        width: 48px;
+        height: 48px;
+      }
+
+      .unfollow {
+        font-size: 8pt;
+        margin-left: 2px;
+      }
+    }
+
+    main {
+      flex-direction: column;
+      padding-bottom: 16px;
+    }
   }
 }
 </style>
