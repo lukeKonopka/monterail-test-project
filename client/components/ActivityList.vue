@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="activityList">
-    <ActivityElement v-for="activity in preppedActivities" :activity="activity" @more="$emit('more')"> </ActivityElement>
+    <ActivityElement v-for="activity in preppedActivities" :activity="activity" @more="$emit('more')" :key="activity.id"> </ActivityElement>
   </div>
 </template>
 

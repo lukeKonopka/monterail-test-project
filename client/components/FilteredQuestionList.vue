@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <QuestionElement :question="question" v-for="question in allQuestions">
+    <QuestionElement :question="question" v-for="question in allQuestions" :key="question.id">
 
     </QuestionElement>
   </div>

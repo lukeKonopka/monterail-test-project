@@ -32,6 +32,7 @@ const data = [
         title: 'Will insulin make my patient gain weight?',
         activities: [
           {
+            id: 1,
             user: {
               id: 2,
               name: 'Andrew',
@@ -40,6 +41,7 @@ const data = [
             type: 'answer'
           },
           {
+            id: 2,
             user: {
               id: 2,
               name: 'Patrick',
@@ -48,6 +50,7 @@ const data = [
             type: 'comment'
           },
           {
+            id: 3,
             user: {
               id: 2,
               name: 'Jim',
@@ -56,6 +59,7 @@ const data = [
             type: 'comment'
           },
           {
+            id: 4,
             user: {
               id: 2,
               name: 'Scott',
@@ -64,6 +68,7 @@ const data = [
             type: 'comment'
           },
           {
+            id: 5,
             user: {
               id: 2,
               name: 'Spock',
@@ -90,6 +95,7 @@ const data = [
         title: 'Vegan diet in diabetes treatment?',
         activities: [
           {
+            id: 6,
             user: {
               id: 2,
               name: 'Matthew',
@@ -98,6 +104,7 @@ const data = [
             type: 'answer'
           },
           {
+            id: 7,
             user: {
               id: 2,
               name: 'Tony',
@@ -106,6 +113,7 @@ const data = [
             type: 'comment'
           },
           {
+            id: 8,
             user: {
               id: 2,
               name: 'Kevin',
@@ -114,6 +122,7 @@ const data = [
             type: 'comment'
           },
           {
+            id: 9,
             user: {
               id: 2,
               name: 'Scott',
@@ -122,6 +131,7 @@ const data = [
             type: 'comment'
           },
           {
+            id: 10,
             user: {
               id: 2,
               name: 'Amanda',
@@ -130,6 +140,7 @@ const data = [
             type: 'comment'
           },
           {
+            id: 11,
             user: {
               id: 2,
               name: 'Johnny',
