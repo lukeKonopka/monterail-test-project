@@ -32,27 +32,29 @@ const mutations = {
   },
 
   setSortType (state, sortType) {
-    for(var key in state.sortBy) {
-      state.sortBy[key] = key == sortType
+    for (const key in state.sortBy) {
+      state.sortBy[key] = key === sortType
     }
   },
 
   setSearchQuery (state, query) {
-    state.searchQuery = query;
+    state.searchQuery = query
   }
 }
 
 const actions = {
   fetchQuestions ({ commit }, pageNo) {
-    // mocked data
+    // Mocked data
     commit('addQuestions', questions[pageNo])
   },
 
   fetchUserDetail ({ commit }, userId) {
+    // Mocked data
     commit('setUserDetail', users[0])
   },
 
   fetchQuestionDetail ({ commit }, questionId) {
+    // Mocked data
     commit('setQuestionDetail', discussion)
   }
 }

@@ -1,9 +1,9 @@
-const generateAdorableAvatars = (data) => {
-  return data.map((page) => {
-    return page.map((question) => {
+const generateAdorableAvatars = data => {
+  return data.map(page => {
+    return page.map(question => {
       question.user.avatarUrl = `https://api.adorable.io/avatars/128/${question.user.name}.png`
 
-      question.content.activities = question.content.activities.map((activity) => {
+      question.content.activities = question.content.activities.map(activity => {
         activity.user.avatarUrl = `https://api.adorable.io/avatars/128/${activity.user.name}.png`
 
         return activity

@@ -16,7 +16,7 @@ const discussion = {
         user: {
           id: 2,
           name: 'Patricia',
-          avatarUrl: 'https://api.adorable.io/avatars/128/patricia.png',
+          avatarUrl: 'https://api.adorable.io/avatars/128/patricia.png'
         },
         date: 1491442800,
         type: 'comment',
@@ -28,7 +28,7 @@ const discussion = {
             user: {
               id: 3,
               name: 'David',
-              avatarUrl: 'https://api.adorable.io/avatars/128/david.png',
+              avatarUrl: 'https://api.adorable.io/avatars/128/david.png'
             },
             date: 1491442800,
             type: 'comment',
@@ -41,7 +41,7 @@ const discussion = {
             user: {
               id: 4,
               name: 'Mark',
-              avatarUrl: 'https://api.adorable.io/avatars/128/mark.png',
+              avatarUrl: 'https://api.adorable.io/avatars/128/mark.png'
             },
             date: 1491442800,
             type: 'comment',
@@ -56,7 +56,7 @@ const discussion = {
         user: {
           id: 11,
           name: 'Joseph',
-          avatarUrl: 'https://api.adorable.io/avatars/128/joseph.png',
+          avatarUrl: 'https://api.adorable.io/avatars/128/joseph.png'
         },
         date: 1491442800,
         type: 'comment',
