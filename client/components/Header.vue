@@ -6,9 +6,13 @@
           <h1>{{ title }}</h1>
           <div class="addQuestion">+</div>
         </div>
-        <slot name="top"></slot>
+        <div class="slot slot-top">
+          <slot name="top"></slot>
+        </div>
       </div>
-      <slot></slot>
+      <div class="slot">
+        <slot></slot>
+      </div>
     </div>
   </header>
 </template>
@@ -123,6 +127,10 @@ export default {
           }
         }
       }
+    }
+
+    .slot-top {
+      display: none; //not enough time to implement mobile filter menu
     }
   }
 </style>
