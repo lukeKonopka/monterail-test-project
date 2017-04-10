@@ -2,7 +2,7 @@
   <div :class="['activity', {'more': type == 'more'}]">
     <div class="icon">
       <template v-if="type != 'more'">
-        <UserAvatar class="avatar" :src="activity.user.avatarUrl"> </UserAvatar>
+        <UserAvatar class="avatar" :src="activity.user.avatarUrl" :userId="activity.user.id"> </UserAvatar>
       </template>
       <div v-if="type == 'more'" class="number"> {{this.activity.length}} </div>
     </div>
