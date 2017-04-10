@@ -18,6 +18,7 @@
         </div>
         <CommentList :comments="discussion.post.comments" :indent="0"> </CommentList>
     </main>
+    <UserDetailModal v-if="$store.getters.userDetail.id"> </UserDetailModal>
   </div>
 </template>
 
@@ -25,12 +26,14 @@
 import HeaderComponent from '../components/Header'
 import QuestionBox from '../components/QuestionBox'
 import CommentList from '../components/CommentList'
+import UserDetailModal from '../components/UserDetailModal'
 
 export default {
   components: {
     HeaderComponent,
     QuestionBox,
-    CommentList
+    CommentList,
+    UserDetailModal
   },
   computed: {
     discussion: function() {

@@ -8,9 +8,7 @@
     </span>
     <span class="option">
       <input type="radio" name="filter" value="all">
-      <span class="desc">
-        All questions
-      </span>
+      <span class="desc">All questions</span>
     </span>
   </div>
 </template>
@@ -23,7 +21,7 @@ export default {
 <style scoped lang="scss">
 .filterToggle {
   flex-grow: 1;
-
+  width: 300px;
   text-align: right;
 
   .option {

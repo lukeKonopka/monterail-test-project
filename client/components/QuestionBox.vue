@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="questionBox">
     <header>
-      <UserAvatar :src="question.user.avatarUrl" :id="question.user.id" class="avatar"> </UserAvatar>
+      <UserAvatar :src="question.user.avatarUrl" :userId="question.user.id" class="avatar"> </UserAvatar>
       <div class="desc">
         <div class="topLine">
           <span class="name">{{question.user.name}}</span>
